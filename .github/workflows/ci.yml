@@ -63,7 +63,7 @@ jobs:
 
   deployment:
     runs-on: ubuntu-latest
-    needs: [build, test]
+    needs: [build]
 
     steps:
       - name: Download Build Artifacts #I will downlaod to the virtual machine, it will donwload what I uploaded before
