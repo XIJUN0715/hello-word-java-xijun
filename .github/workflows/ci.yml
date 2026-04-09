@@ -1,8 +1,8 @@
-name: CI
+name: CI #include the operating system code
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master ] #because the code is belong to the master branch
   pull_request:
     branches: [ master ]
 
@@ -11,17 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+    - name: Checkout code #function inside the github function that will copy the code to the tertial machine of hte function
+      uses: actions/checkout@v4 #need to check the version of this function
 
     - name: Set up JDK 17
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v4 #version 4, install java files into the virtual machine
       with:
         distribution: 'adopt'
         java-version: '17'
 
-    - name: Build with Gradle
-      run: gradle build 
+    - name: Build with Gradle #the virtual machine will includ ethe gradle
+      run: gradle build #virtual machine will be done in teh cloud, 
 
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4

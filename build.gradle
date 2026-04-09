@@ -40,7 +40,7 @@ test {
     destinationDirectory = file('build/libs')  // Output directory for the JAR file
 }
 
-jacocoTestReport {
+jacocoTestReport { //GENERATE the test coverage here
     dependsOn test
     reports {
         xml.required = true
